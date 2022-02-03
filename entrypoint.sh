@@ -9,7 +9,7 @@ echo ${signed}
 git config user.name "${GITHUB_ACTOR}"
 git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 
-if [${signed}]
+if ${signed}
 then
     git tag -s -a "${tag}" -m "${message}"
 else
